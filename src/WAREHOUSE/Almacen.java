@@ -8,8 +8,5 @@ public class Almacen {
 		
 	}
 
-	/*public Articulo elMasCaro() {
-		return null;
-	}
-	*/
+	
 }

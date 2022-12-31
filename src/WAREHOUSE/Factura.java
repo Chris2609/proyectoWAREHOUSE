@@ -12,14 +12,16 @@ public class Factura {
 	
 	public void addLinea() {
 		
-	}
-	
-	public void eliminarLinea() {
 		
 	}
 	
-	public double precioTotal()
-	{
+	public void eliminarLinea() {
+		LineaFactura lineaFactura = new LineaFactura();
+
+	}
+	
+	public double precioTotal(){
+		
 		return 0;
 	}	
 	
