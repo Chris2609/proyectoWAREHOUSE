@@ -3,7 +3,7 @@ package WAREHOUSE;
 public class LineaFactura {
 
 	private int numero;
-	private String articulo;
+	private Articulo articulo;
 	private int cantidad;
 	
 	public double precioTotal() {
@@ -16,10 +16,10 @@ public class LineaFactura {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	public String getArticulo() {
+	public Articulo getArticulo() {
 		return articulo;
 	}
-	public void setArticulo(String articulo) {
+	public void setArticulo(Articulo articulo) {
 		this.articulo = articulo;
 	}
 	public int getCantidad() {
