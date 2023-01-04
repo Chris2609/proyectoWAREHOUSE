@@ -16,7 +16,6 @@ public class Factura {
 	}
 	
 	public void eliminarLinea() {
-		LineaFactura lineaFactura = new LineaFactura();
 
 	}
 	
