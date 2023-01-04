@@ -31,10 +31,35 @@ public class Almacen {
 		
 	}
 	
-	public ArrayList<Articulo> stockJusto(int stock){
+	public ArrayList<Articulo> stockJusto(){
 		
 		return null;
 		
 	}
 	
+	public Articulo articulo(String codigoProducto) {
+		
+		return null;
+		
+	}
+	
+	public boolean disponibilidad(int cantidad, String kodigoProducto) {
+		
+		return false;
+		
+	}
+	
+	public ArrayList<Articulo> equivalentes(Articulo articulo){
+		return null;
+		
+	}
+	
+	public ArrayList<Articulo> ordenarPorPrecio(String orden){
+		
+		return null;
+	} 
+	
+	public void ordenarPorStock(String orden) {
+		
+	}
 }
