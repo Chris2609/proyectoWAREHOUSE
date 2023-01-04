@@ -9,6 +9,19 @@ public abstract class Articulo {
 	private double precio;
 	private int stock;
 	
+	public Articulo() {
+		
+	}
+	
+	public Articulo(String code, String name, String mark, int capacidadBotella, double precio, int Stock) {
+		this.code = code;
+		this.name = name;
+		this.mark = mark;
+		this.capacidadBotella = capacidadBotella;
+		this.precio = precio;
+		this.stock = stock;
+	}
+	
 	public void incrementarStock(int cantidad) {
 		
 	}
