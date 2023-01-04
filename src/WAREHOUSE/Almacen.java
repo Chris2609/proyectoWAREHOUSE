@@ -1,12 +1,17 @@
 package WAREHOUSE;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Almacen {
 
 	private ArrayList<Articulo> articulo = new ArrayList();
 	
-	public void cargarDatos() {
+	public void cargarDatos() throws FileNotFoundException {
+		File fichero = new File("datos/fichero.txt");
+		Scanner scan = new Scanner(fichero);
 		
 	}
 
