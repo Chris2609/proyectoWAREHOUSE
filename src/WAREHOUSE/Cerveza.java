@@ -1,5 +1,7 @@
 package WAREHOUSE;
 
+import javax.swing.JOptionPane;
+
 public class Cerveza extends Articulo {
 
 	private String origen;
@@ -33,7 +35,8 @@ public class Cerveza extends Articulo {
 	@Override
 	public void visualizarArticulo() {
 		// TODO Auto-generated method stub
-		
+		JOptionPane.showMessageDialog(null, "La cerveza es origen " + this.origen + "\nEl tipo de cereales es: " + this.cereales + "\nGrados del alcohol: " + this.gradosAlcohol);
+
 	}
 
 	@Override
@@ -45,7 +48,9 @@ public class Cerveza extends Articulo {
 	@Override
 	public void precioTotal() {
 		// TODO Auto-generated method stub
-		
+		double preciototal = 0;
+		preciototal = this.getPrecio()*this.getStock();
+		JOptionPane.showMessageDialog(null, "El precio de todas las cervezas son " + preciototal + "€");
 	}
 
 }
