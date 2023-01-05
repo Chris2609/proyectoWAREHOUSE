@@ -23,11 +23,11 @@ public abstract class Articulo {
 	}
 	
 	public void incrementarStock(int cantidad) {
-		
+		this.stock = this.stock+cantidad;
 	}
 	
 	public void disminuirStock(int cantidad) {
-		
+		this.stock = this.stock-cantidad;
 	}
 	
 	public abstract void visualizarArticulo();
@@ -72,6 +72,12 @@ public abstract class Articulo {
 	}
 	public void setStock(int stock) {
 		this.stock = stock;
+	}
+
+	@Override
+	public String toString() {
+		return "Articulo [code=" + code + ", name=" + name + ", mark=" + mark + ", capacidadBotella=" + capacidadBotella
+				+ ", precio=" + precio + ", stock=" + stock + "]";
 	}
 	
 	
