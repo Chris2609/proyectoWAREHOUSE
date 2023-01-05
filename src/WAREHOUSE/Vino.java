@@ -2,7 +2,7 @@ package WAREHOUSE;
 
 import javax.swing.JOptionPane;
 
-public class Vino extends Articulo {
+public class Vino extends Articulo implements Alcoholico {
 
 	private String color;
 	private String origen;
@@ -75,6 +75,29 @@ public class Vino extends Articulo {
 		double preciototal = 0;
 		preciototal = this.getPrecio()*this.getStock();
 		JOptionPane.showMessageDialog(null, "El precio de todos los vinos son " + preciototal + "€");
+	}
+
+	@Override
+	public boolean esFuerte() {
+		// TODO Auto-generated method stub
+		boolean muchoAlcohol=false;
+		if(this.gradosAlcohol > 13.5) {
+			muchoAlcohol = true;
+		}
+		return muchoAlcohol;
+	}
+
+	@Override
+	public double calcularTasa() {
+		// TODO Auto-generated method stub
+		double calctasa=0;
+		
+		if(this.esFuerte()==true) {
+			calctasa = TASA_BEBIDAS_FUERTES;
+		}else if(this.esFuerte()==false) {
+			calctasa = TASA_BEBIDAS_SUAVES;
+		}
+		return calctasa;
 	}
 
 }
