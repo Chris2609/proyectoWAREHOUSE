@@ -57,7 +57,7 @@ public class Refresco extends Articulo{
 	public boolean saludable() {
 		// TODO Auto-generated method stub
 		boolean saludable = true;
-		if(cantidadAzucar > 20) {
+		if(this.cantidadAzucar > 20) {
 			saludable = false;
 		}
 		return saludable;
