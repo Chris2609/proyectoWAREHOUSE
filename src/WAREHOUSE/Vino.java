@@ -1,5 +1,7 @@
 package WAREHOUSE;
 
+import javax.swing.JOptionPane;
+
 public class Vino extends Articulo {
 
 	private String color;
@@ -53,19 +55,26 @@ public class Vino extends Articulo {
 	@Override
 	public void visualizarArticulo() {
 		// TODO Auto-generated method stub
-		
+		JOptionPane.showMessageDialog(null, "La cerveza es de color " + this.color + "\nOrigen: " + this.origen + "\nAño: " + this.anio + "\nTipo de uva: " + this.tipoDeUva + "\nGrados del alcohol: " + this.gradosAlcohol);
+
 	}
 
 	@Override
 	public boolean saludable() {
 		// TODO Auto-generated method stub
-		return false;
+		boolean saludable=true;
+		if(!this.origen.equals("Navarra")) {
+			saludable=false;
+		}
+		return saludable;
 	}
 
 	@Override
 	public void precioTotal() {
 		// TODO Auto-generated method stub
-		
+		double preciototal = 0;
+		preciototal = this.getPrecio()*this.getStock();
+		JOptionPane.showMessageDialog(null, "El precio de todos los vinos son " + preciototal + "€");
 	}
 
 }
