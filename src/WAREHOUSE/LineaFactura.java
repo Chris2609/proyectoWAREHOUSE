@@ -28,6 +28,17 @@ public class LineaFactura {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
+
+
+	public String formatofich() {
+		return  this.numero + ":" + this.articulo.getName() + ":" + this.cantidad;
+	}
+
+	@Override
+	public String toString() {
+		return "LineaFactura [numero=" + numero + ", articulo=" + articulo + ", cantidad=" + cantidad + "]";
+	}
+	
 	
 	
 }

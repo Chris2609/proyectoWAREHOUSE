@@ -1,6 +1,12 @@
 package WAREHOUSE;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Date;
+
+import javax.swing.JOptionPane;
+
 
 public class Factura {
 	
@@ -9,6 +15,7 @@ public class Factura {
 	private String nombreEmpresa;
 	private Date fecha;
 	private String concepto;
+	private ArrayList<LineaFactura> lineasfactura = new ArrayList();
 	
 	public void addLinea() {
 		
@@ -20,16 +27,26 @@ public class Factura {
 	}
 	
 	public double precioTotal(){
-		
-		return 0;
+		double preciototal = 0;
+		for(LineaFactura lineas:lineasfactura) {
+			preciototal = preciototal + lineas.precioTotal();
+		}
+		return preciototal;
 	}	
 	
 	public void mostrarEnPantalla() {
-		
+		for(LineaFactura lineas:lineasfactura) {
+			JOptionPane.showMessageDialog(null, this.numero + ", " + this.nombreEmpresa + ", " + this.fecha + ", " + this.concepto + "\n" + this.lineasfactura);
+		}
 	}
 	
-	public void guardarEnFichero() {
+	public void guardarEnFichero() throws FileNotFoundException {
 		
+		PrintWriter writer = new PrintWriter("facturas/" + this.numero + "_" + this.fecha + "_factura.txt");
+		writer.print("Factura: " + this.numero + "\nEmpresa: " + this.nombreEmpresa + "\nFecha: " + this.fecha + "\nConcepto: " + this.concepto + "\n");
+		for(LineaFactura lineas:lineasfactura) {
+			writer.println(lineas.formatofich());
+		}
 	}
 	
 	
@@ -62,6 +79,12 @@ public class Factura {
 	}
 	public void setConcepto(String concepto) {
 		this.concepto = concepto;
+	}
+
+	@Override
+	public String toString() {
+		return "Factura [numero=" + numero + ", nombreEmpresa=" + nombreEmpresa + ", fecha=" + fecha + ", concepto="
+				+ concepto + ", lineasfactura=" + lineasfactura + "]";
 	}
 	
 	
