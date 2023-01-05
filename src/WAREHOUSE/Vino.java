@@ -55,7 +55,7 @@ public class Vino extends Articulo {
 	@Override
 	public void visualizarArticulo() {
 		// TODO Auto-generated method stub
-		JOptionPane.showMessageDialog(null, "La cerveza es de color " + this.color + "\nOrigen: " + this.origen + "\nAño: " + this.anio + "\nTipo de uva: " + this.tipoDeUva + "\nGrados del alcohol: " + this.gradosAlcohol);
+		JOptionPane.showMessageDialog(null, "El vino es de color " + this.color + "\nOrigen: " + this.origen + "\nAño: " + this.anio + "\nTipo de uva: " + this.tipoDeUva + "\nGrados del alcohol: " + this.gradosAlcohol);
 
 	}
 
