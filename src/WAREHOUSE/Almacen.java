@@ -36,7 +36,17 @@ public class Almacen {
 
 	public Articulo elMasCaro() {
 		
-		return null;
+		double precio = 0;
+		Articulo elMasCaro = null;
+		
+		for(Articulo articulo:articulos) {
+			 if(precio < articulo.getPrecio()) {
+				 precio = articulo.getPrecio();
+				 elMasCaro = articulo;
+			 }
+		 }
+		
+		return elMasCaro;
 	}
 	
 	public double precio(String codigoProducto) {
