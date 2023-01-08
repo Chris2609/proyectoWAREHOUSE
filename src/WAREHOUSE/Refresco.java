@@ -9,6 +9,16 @@ public class Refresco extends Articulo{
 	private boolean gaseoso;
 	private int cantidadAzucar;
 	
+	
+	
+	public Refresco(String code, String name, String mark, int capacidadBotella, double precio, int stock, String sabor, boolean zumo, boolean gaseoso, int cantidadAzucar) {
+		super(code, name, mark, capacidadBotella, precio, stock);
+		this.sabor = sabor;
+		this.zumo = zumo;
+		this.gaseoso = gaseoso;
+		this.cantidadAzucar = cantidadAzucar;
+	}
+	
 	public void visualizarPropiedades() {
 		JOptionPane.showMessageDialog(null, "El refresco es de " + this.sabor + "\nEs un zumo?: " + this.zumo + "\nEs gaseoso?: " + this.gaseoso + "\nSu cantidad de azúcar es: " + this.cantidadAzucar + "gr");
 	}
