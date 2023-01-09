@@ -7,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Almacen {
 
 	private ArrayList<Articulo> articulos = new ArrayList();
@@ -33,6 +35,10 @@ public class Almacen {
 				Vino vino = new Vino(partes[0], partes[1], partes[2], Integer.parseInt(partes[3]), Double.parseDouble(partes[4]), Integer.parseInt(partes[5]), partes[6], partes[7], Integer.parseInt(partes[8]), partes[9], Double.parseDouble(partes[10]));
 				articulos.add(vino);
 			}
+		}
+		
+		for (int i = 0; i < articulos.size(); i++) {
+			JOptionPane.showMessageDialog(null, articulos);
 		}
 	}
 

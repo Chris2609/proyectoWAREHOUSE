@@ -61,14 +61,12 @@ public class Vino extends Articulo implements Alcoholico {
 
 	@Override
 	public void visualizarArticulo() {
-		// TODO Auto-generated method stub
 		JOptionPane.showMessageDialog(null, "El vino es de color " + this.color + "\nOrigen: " + this.origen + "\nAño: " + this.anio + "\nTipo de uva: " + this.tipoDeUva + "\nGrados del alcohol: " + this.gradosAlcohol);
 
 	}
 
 	@Override
 	public boolean saludable() {
-		// TODO Auto-generated method stub
 		boolean saludable=true;
 		if(!this.origen.equals("Navarra")) {
 			saludable=false;
@@ -78,7 +76,6 @@ public class Vino extends Articulo implements Alcoholico {
 
 	@Override
 	public void precioTotal() {
-		// TODO Auto-generated method stub
 		double preciototal = 0;
 		preciototal = this.getPrecio()*this.getStock();
 		JOptionPane.showMessageDialog(null, "El precio de todos los vinos son " + preciototal + "€");
@@ -86,7 +83,6 @@ public class Vino extends Articulo implements Alcoholico {
 
 	@Override
 	public boolean esFuerte() {
-		// TODO Auto-generated method stub
 		boolean muchoAlcohol=false;
 		if(this.gradosAlcohol > 13.5) {
 			muchoAlcohol = true;
@@ -96,7 +92,6 @@ public class Vino extends Articulo implements Alcoholico {
 
 	@Override
 	public double calcularTasa() {
-		// TODO Auto-generated method stub
 		double calctasa=0;
 		
 		if(this.esFuerte()==true) {

@@ -1,1 +1,2 @@
 1:cocacolaZero:cocacola:2:1.99:15:cocacolaZero:false:true:10
+2:cerveza estrella:estrella galicia:1:2:10:Pueblo:Lion:3

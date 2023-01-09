@@ -13,7 +13,7 @@ public abstract class Articulo {
 		
 	}
 	
-	public Articulo(String code, String name, String mark, int capacidadBotella, double precio, int Stock) {
+	public Articulo(String code, String name, String mark, int capacidadBotella, double precio, int stock) {
 		this.code = code;
 		this.name = name;
 		this.mark = mark;
@@ -76,8 +76,8 @@ public abstract class Articulo {
 
 	@Override
 	public String toString() {
-		return "Articulo [code=" + code + ", name=" + name + ", mark=" + mark + ", capacidadBotella=" + capacidadBotella
-				+ ", precio=" + precio + ", stock=" + stock + "]";
+		return   code + "," + name + "," + mark + "," + capacidadBotella
+				+ "," + precio + "," + stock + "\n";
 	}
 	
 	

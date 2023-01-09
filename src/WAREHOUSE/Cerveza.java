@@ -42,20 +42,17 @@ public class Cerveza extends Articulo implements Alcoholico {
 
 	@Override
 	public void visualizarArticulo() {
-		// TODO Auto-generated method stub
 		JOptionPane.showMessageDialog(null, "La cerveza es origen " + this.origen + "\nEl tipo de cereales es: " + this.cereales + "\nGrados del alcohol: " + this.gradosAlcohol);
 
 	}
 
 	@Override
 	public boolean saludable() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void precioTotal() {
-		// TODO Auto-generated method stub
 		double preciototal = 0;
 		preciototal = this.getPrecio()*this.getStock();
 		JOptionPane.showMessageDialog(null, "El precio de todas las cervezas son " + preciototal + "€");
@@ -63,7 +60,6 @@ public class Cerveza extends Articulo implements Alcoholico {
 
 	@Override
 	public boolean esFuerte() {
-		// TODO Auto-generated method stub
 		boolean muchoAlcohol=false;
 		if(this.gradosAlcohol > 7) {
 			muchoAlcohol = true;

@@ -58,14 +58,12 @@ public class Refresco extends Articulo{
 
 	@Override
 	public void visualizarArticulo() {
-		// TODO Auto-generated method stub
 		JOptionPane.showMessageDialog(null, "El refresco es de " + this.sabor + "\nEs un zumo?: " + this.zumo + "\nEs gaseoso?: " + this.gaseoso + "\nSu cantidad de azúcar es: " + this.cantidadAzucar + "gr");
 
 	}
 
 	@Override
 	public boolean saludable() {
-		// TODO Auto-generated method stub
 		boolean saludable = true;
 		if(this.cantidadAzucar > 20) {
 			saludable = false;
@@ -75,7 +73,7 @@ public class Refresco extends Articulo{
 
 	@Override
 	public void precioTotal() {
-		// TODO Auto-generated method stub
+	
 		double preciototal = 0;
 		preciototal = this.getPrecio()*this.getStock();
 		JOptionPane.showMessageDialog(null, "El precio de todos los refrescos son " + preciototal + "€");
