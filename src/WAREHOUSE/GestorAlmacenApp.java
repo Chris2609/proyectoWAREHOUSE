@@ -18,7 +18,8 @@ public class GestorAlmacenApp {
 				Almacen cargar = new Almacen();
 				cargar.cargarDatos();
 				
-				JOptionPane.showMessageDialog(null, "a");
+			
+				
 				break;
 			case 2:
 				JOptionPane.showMessageDialog(null, "segunda opcion seleccionada");

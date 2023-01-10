@@ -61,7 +61,7 @@ public class Vino extends Articulo implements Alcoholico {
 
 	@Override
 	public void visualizarArticulo() {
-		JOptionPane.showMessageDialog(null, "El vino es de color " + this.color + "\nOrigen: " + this.origen + "\nAño: " + this.anio + "\nTipo de uva: " + this.tipoDeUva + "\nGrados del alcohol: " + this.gradosAlcohol);
+		JOptionPane.showMessageDialog(null, super.toString() + "Color: " + this.color + "\nOrigen: " + this.origen + "\nAño: " + this.anio + "\nTipo de uva: " + this.tipoDeUva + "\nGrados de alcohol: " + this.gradosAlcohol);
 
 	}
 

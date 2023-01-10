@@ -1,2 +1,4 @@
 1:cocacolaZero:cocacola:2:1.99:15:cocacolaZero:false:true:10
 2:cerveza estrella:estrella galicia:1:2:10:Pueblo:Lion:3
+3:Vino tinto:Don Simon:1:0.8:5:Cereza Picota:Navarra:2022:Morada:13
+1:Cocacola Light:cocacola:2:2.10:12:cocacola Light:false:true:7

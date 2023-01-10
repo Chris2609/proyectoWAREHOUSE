@@ -20,7 +20,7 @@ public class Refresco extends Articulo{
 	}
 	
 	public void visualizarPropiedades() {
-		JOptionPane.showMessageDialog(null, "El refresco es de " + this.sabor + "\nEs un zumo?: " + this.zumo + "\nEs gaseoso?: " + this.gaseoso + "\nSu cantidad de azúcar es: " + this.cantidadAzucar + "gr");
+		JOptionPane.showMessageDialog(null, super.toString()  + "Sabor: " + this.sabor + "\nEs un zumo?: " + this.zumo + "\nEs gaseoso?: " + this.gaseoso + "\nAzúcar: " + this.cantidadAzucar + "gr");
 	}
 
 	public boolean esSaludable() {

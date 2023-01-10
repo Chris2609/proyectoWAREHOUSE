@@ -42,7 +42,7 @@ public class Cerveza extends Articulo implements Alcoholico {
 
 	@Override
 	public void visualizarArticulo() {
-		JOptionPane.showMessageDialog(null, "La cerveza es origen " + this.origen + "\nEl tipo de cereales es: " + this.cereales + "\nGrados del alcohol: " + this.gradosAlcohol);
+		JOptionPane.showMessageDialog(null, super.toString() + "La cerveza es origen " + this.origen + "\nEl tipo de cereales es: " + this.cereales + "\nGrados del alcohol: " + this.gradosAlcohol);
 
 	}
 
