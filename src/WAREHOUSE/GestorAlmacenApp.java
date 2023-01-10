@@ -18,7 +18,8 @@ public class GestorAlmacenApp {
 				Almacen cargar = new Almacen();
 				cargar.cargarDatos();
 				
-			
+				
+				
 				
 				break;
 			case 2:

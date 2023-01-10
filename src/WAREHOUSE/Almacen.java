@@ -5,6 +5,7 @@ package WAREHOUSE;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -71,8 +72,13 @@ public class Almacen {
 	}
 	
 	public ArrayList<Articulo> stockJusto(){
+		ArrayList<Articulo> stockjusto = new ArrayList<Articulo>();
 		
-		return null;
+		for(Articulo articulos: stockjusto)
+		if(articulos.getStock() < 10) {
+			stockjusto.add(articulos);
+		}
+		return stockjusto;
 		
 	}
 	

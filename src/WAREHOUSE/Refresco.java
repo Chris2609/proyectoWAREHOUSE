@@ -22,14 +22,6 @@ public class Refresco extends Articulo{
 	public void visualizarPropiedades() {
 		JOptionPane.showMessageDialog(null, super.toString()  + "Sabor: " + this.sabor + "\nEs un zumo?: " + this.zumo + "\nEs gaseoso?: " + this.gaseoso + "\nAzúcar: " + this.cantidadAzucar + "gr");
 	}
-
-	public boolean esSaludable() {
-		boolean saludable = true;
-		if(cantidadAzucar > 20) {
-			saludable = false;
-		}
-		return saludable;
-	}
 	
 	public String getSabor() {
 		return sabor;
