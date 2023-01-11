@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class Almacen {
 
-	private ArrayList<Articulo> articulos = new ArrayList();
+	private ArrayList<Articulo> articulos = new ArrayList<Articulo>();
 	
 	public void cargarDatos() throws FileNotFoundException {
 		File fichero = new File("datos/almacen.txt");
