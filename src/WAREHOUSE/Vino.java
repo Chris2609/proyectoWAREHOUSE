@@ -102,4 +102,11 @@ public class Vino extends Articulo implements Alcoholico {
 		return calctasa;
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + "Vino [color=" + color + ", origen=" + origen + ", anio=" + anio + ", tipoDeUva=" + tipoDeUva
+				+ ", gradosAlcohol=" + gradosAlcohol + "]";
+	}
+
+	
 }

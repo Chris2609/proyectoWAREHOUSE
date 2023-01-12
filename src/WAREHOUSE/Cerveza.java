@@ -86,4 +86,11 @@ public class Cerveza extends Articulo implements Alcoholico {
 		return calctasa;
 	}
 
+
+	@Override
+	public String toString() {
+		return super.toString() + "Cerveza [origen=" + origen + ", cereales=" + cereales + ", gradosAlcohol=" + gradosAlcohol + "]";
+	}
+
+	
 }
