@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class Almacen {
 
-	private ArrayList<Articulo> articulos = new ArrayList<Articulo>();
+	public ArrayList<Articulo> articulos = new ArrayList<Articulo>();
 	
 	public void cargarDatos() throws FileNotFoundException {
 		File fichero = new File("datos/almacen.txt");
@@ -56,7 +56,7 @@ public class Almacen {
 				 elMasCaro = articulo;
 			 }
 		 }
-		
+
 		return elMasCaro;
 	}
 	
@@ -66,15 +66,22 @@ public class Almacen {
 	}
 	
 	public boolean hayStock(String codigoProducto) {
+		boolean haystock = false;
+		for(Articulo articulos: articulos)
+			if(articulos.getName().equals(codigoProducto)) {
+				if(articulos.getStock() > 0) {
+					haystock = true;
+				}
+			}
 		
-		return true;
+		return haystock;
 		
 	}
 	
 	public ArrayList<Articulo> stockJusto(){
 		ArrayList<Articulo> stockjusto = new ArrayList<Articulo>();
 		
-		for(Articulo articulos: stockjusto)
+		for(Articulo articulos: articulos)
 		if(articulos.getStock() < 10) {
 			stockjusto.add(articulos);
 		}

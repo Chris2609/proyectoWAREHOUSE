@@ -16,6 +16,10 @@ public class Cerveza extends Articulo implements Alcoholico {
 	}
 	
 	
+	public Cerveza() {
+	}
+
+
 	public String getOrigen() {
 		return origen;
 	}
@@ -48,8 +52,11 @@ public class Cerveza extends Articulo implements Alcoholico {
 
 	@Override
 	public boolean saludable() {
-		return false;
-	}
+		boolean saludable=false;
+		if(this.getCereales().toLowerCase().contains("lúpulo")) {
+			saludable=true;
+		}
+		return saludable;	}
 
 	@Override
 	public void precioTotal() {

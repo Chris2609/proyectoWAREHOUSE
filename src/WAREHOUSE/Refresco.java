@@ -10,7 +10,6 @@ public class Refresco extends Articulo{
 	private int cantidadAzucar;
 	
 	
-	
 	public Refresco(String code, String name, String mark, int capacidadBotella, double precio, int stock, String sabor, boolean zumo, boolean gaseoso, int cantidadAzucar) {
 		super(code, name, mark, capacidadBotella, precio, stock);
 		this.sabor = sabor;
@@ -19,6 +18,9 @@ public class Refresco extends Articulo{
 		this.cantidadAzucar = cantidadAzucar;
 	}
 	
+	public Refresco() {
+	}
+
 	public void visualizarPropiedades() {
 		JOptionPane.showMessageDialog(null, super.toString()  + "Sabor: " + this.sabor + "\nEs un zumo?: " + this.zumo + "\nEs gaseoso?: " + this.gaseoso + "\nAzúcar: " + this.cantidadAzucar + "gr");
 	}
@@ -61,6 +63,14 @@ public class Refresco extends Articulo{
 			saludable = false;
 		}
 		return saludable;
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return super.toString() + "Refresco [sabor=" + sabor + ", zumo=" + zumo + ", gaseoso=" + gaseoso + ", cantidadAzucar="
+				+ cantidadAzucar + "]";
 	}
 
 	@Override
